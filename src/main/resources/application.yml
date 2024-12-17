@@ -1,0 +1,16 @@
+spring:
+  security:
+    secret-key: ${JWT_SECRET_KEY:secret-key}
+  application:
+    name: user_service
+  datasource:
+    url: ${POSTGRES_JDBC_URL:jdbc:postgresql://localhost:5442/postgres}
+    username: ${POSTGRES_USER:postgres}
+    password: ${POSTGRES_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  port: 8082
